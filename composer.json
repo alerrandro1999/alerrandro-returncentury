@@ -1,0 +1,20 @@
+{
+    "name": "alerrandro/returncentury",
+    "description": "returns the century of the year informed",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Alerrandro Borges",
+            "email": "alerrandrokaton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Alerrandro\\century\\" : "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
+    }
+}
