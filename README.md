@@ -3,7 +3,6 @@
 Simples pacote para retornar o século do ano informado.
 
 ## Requisitos 
-
 - PHP >= 7.0
 - Composer
 
@@ -13,15 +12,11 @@ Instale o pacote utilizando **Composer**
 
 
 ## Utilização
-
-
-
 ```php
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
 use Alerrandro\century\ReturnCentury;
-
 
 $century = ReturnCentury::century(2022);
 ```
