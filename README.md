@@ -26,5 +26,4 @@ use Alerrandro\century\ReturnCentury;
 $century = ReturnCentury::century(2022);
 ```
 
-Suporte somente para os séculos d.C.
 
