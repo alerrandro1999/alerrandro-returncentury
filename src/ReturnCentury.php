@@ -4,36 +4,41 @@ namespace Alerrandro\century;
 
 class ReturnCentury
 {
-    public static function returnLenght($ano)
+    public static function returnLenght($ano) : string
     {
         return strlen($ano);
     }
 
-    public static function lastTwoWithThreeHouses($ano)
+    public static function lastTwoWithThreeHouses($ano) : string
     {
         return substr($ano, 1, 2);
     }
 
-    public static function lastTwoWithFourHouses($ano)
+    public static function lastTwoWithFourHouses($ano) : string
     {
         return substr($ano, 2, 2);
     }
 
-    public static function lastTwo($ano)
+    public static function lastTwo($ano) : string
     {
         return substr($ano, 0, -2);
     }
 
-    public static function century(string $ano)
+    public static function century(string $ano) : string
     {
         if (self::returnLenght($ano) == 3 && self::lastTwoWithThreeHouses($ano) == 00) {
-            echo self::lastTwo($ano);
+            return self::lastTwo($ano);
         } elseif (self::returnLenght($ano) == 4 && self::lastTwoWithFourHouses($ano) == 00) {
-            echo self::lastTwo($ano);
+            return self::lastTwo($ano);
         } elseif (self::returnLenght($ano) >= 3) {
-            echo self::lastTwo($ano) + 1;
+            return self::lastTwo($ano) + 1;
         } else {
-            echo 1;
+            return 1;
         }
+    }
+
+    public static function centuryNow() : string
+    {
+        return self::century(date('Y'));
     }
 }
