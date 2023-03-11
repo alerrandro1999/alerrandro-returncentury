@@ -2,42 +2,44 @@
 
 namespace Alerrandro\century;
 
-class ReturnCentury
+use Alerrandro\century\interface\Century;
+
+class ReturnCentury implements Century
 {
-    public static function returnLenght($ano) : string
+    public static function returnLenght($year): string
     {
-        return strlen($ano);
+        return strlen($year);
     }
 
-    public static function lastTwoWithThreeHouses($ano) : string
+    public static function lastTwoWithThreeHouses($year): string
     {
-        return substr($ano, 1, 2);
+        return substr($year, 1, 2);
     }
 
-    public static function lastTwoWithFourHouses($ano) : string
+    public static function lastTwoWithFourHouses($year): string
     {
-        return substr($ano, 2, 2);
+        return substr($year, 2, 2);
     }
 
-    public static function lastTwo($ano) : string
+    public static function lastTwo($year): string
     {
-        return substr($ano, 0, -2);
+        return substr($year, 0, -2);
     }
 
-    public static function century(string $ano) : string
+    public static function century(string $year): string
     {
-        if (self::returnLenght($ano) == 3 && self::lastTwoWithThreeHouses($ano) == 00) {
-            return self::lastTwo($ano);
-        } elseif (self::returnLenght($ano) == 4 && self::lastTwoWithFourHouses($ano) == 00) {
-            return self::lastTwo($ano);
-        } elseif (self::returnLenght($ano) >= 3) {
-            return self::lastTwo($ano) + 1;
+        if (self::returnLenght($year) == 3 && self::lastTwoWithThreeHouses($year) == 00) {
+            return self::lastTwo($year);
+        } elseif (self::returnLenght($year) == 4 && self::lastTwoWithFourHouses($year) == 00) {
+            return self::lastTwo($year);
+        } elseif (self::returnLenght($year) >= 3) {
+            return self::lastTwo($year) + 1;
         } else {
             return 1;
         }
     }
 
-    public static function centuryNow() : string
+    public static function centuryNow(): string
     {
         return self::century(date('Y'));
     }
