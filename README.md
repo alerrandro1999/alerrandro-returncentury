@@ -1,14 +1,16 @@
 # PHP Century
 
-Simples pacote para retornar o século do ano informado.
+Pacote para retornar o século do ano informado.
 
 ## Requisitos 
-- PHP >= 7.0
+- PHP >= 7.4
 - Composer
 
 ## Instalação
 Instale o pacote utilizando **Composer**
-> composer require alerrandro/returncentury
+```
+composer require alerrandro/returncentury
+```
 
 
 ## Utilização
@@ -18,7 +20,19 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Alerrandro\century\ReturnCentury;
 
-$century = ReturnCentury::century(2022);
+
+$century = ReturnCentury::century(1999); // 20;
+
+$century = ReturnCentury::centuryNow(); // 21 
 ```
+
+A função **century** deve receber o parametro com o ano.
+
+A função **centuryNow** retorna o seculo do ano atual.
+
+## Desenvolvedor
+
+- Linkedin - [Alerrandro Borges](https://www.linkedin.com/in/alerrandro-borges-b45a6a1a1/)
+- Email - [alerrandrokaton@gmail.com](mailto:alerrandrokaton@gmail.com)
 
 
