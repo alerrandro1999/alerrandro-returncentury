@@ -26,9 +26,9 @@ $century = ReturnCentury::century(1999); // 20;
 $century = ReturnCentury::centuryNow(); // 21 
 ```
 
-A função **century** deve receber o parametro com o ano.
+A função **century** deve receber o parâmetro com o ano.
 
-A função **centuryNow** retorna o seculo do ano atual.
+A função **centuryNow** retorna o século do ano atual.
 
 ## Desenvolvedor
 
